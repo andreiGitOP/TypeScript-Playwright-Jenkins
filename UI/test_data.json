@@ -1,0 +1,14 @@
+[
+    {
+      "name": "John",
+      "email": "john@doe.com",
+      "pass": "parola",
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": "adress",
+      "state": "AG",
+      "city": "Pitesti",
+      "zip": "1234",
+      "mobile": "123456"
+    }   
+  ]
