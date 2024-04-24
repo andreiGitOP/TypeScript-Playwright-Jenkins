@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import {HomePage} from '../HomePage'
-import { LoginPage } from '../LoginPage';
 import { HelperMethods } from '../../HelperMethods';
+import { HomePage } from '../page_object/HomePage';
+import { LoginPage } from '../page_object/LoginPage';
 
 test('Create and delete account', async ({ page }) =>{
     

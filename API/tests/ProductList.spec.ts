@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { ProductList } from "../ProductList";
+import { ProductList } from "../page_object/ProductList";
 
 test("Get all products list", async ({ request }) => {
   const products = new ProductList(request);
