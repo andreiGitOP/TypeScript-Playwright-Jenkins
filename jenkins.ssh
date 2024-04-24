@@ -1,4 +1,22 @@
-npx playwright install-deps
-npm install -D @playwright/test
-npx playwright install
-npm install --force
+pipeline {
+    agent any    
+    stages {        
+        stage('Install Dependencies') {
+            steps {
+                // Install Node.js and npm
+                nodejs('node') {
+                    // Install Playwright as a development dependency
+                    sh 'npm install --save-dev @playwright/test'
+                }
+            }
+        }
+        stage('Run Playwright Tests') {
+            steps {
+                // Run your Playwright tests using the 'testCase' script
+                nodejs('node') {
+                    sh 'npm run testCase'
+                }
+            }
+        }
+    }
+}
