@@ -4,24 +4,18 @@ pipeline {
     tools{nodejs "recent ode"}
     
     stages {               
-        stage('Install Playwright') {
-            steps {
-                // Install Playwright as a development dependency
-                // This step assumes Node.js and npm are already installed
-                nodejs('recent node') {
-                    sh 'npm install --save-dev @playwright/test'
+        stage('Install node') {
+            steps {               
+                    sh 'npm install'
                 }
             }
         }
         
         stage('Run Playwright Tests') {
-            steps {
-                // Run Playwright tests using npm script
-                // This step assumes Playwright is installed and configured in your project
+            steps {                
                 nodejs('recent node') {
                     sh 'npm run testCase'
                 }
             }
         }
     }
-}
