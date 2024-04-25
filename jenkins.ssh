@@ -9,7 +9,7 @@ pipeline {
                     sh 'npm install'
                 }
             }
-        }
+        
         
         stage('Run Playwright Tests') {
             steps {                
@@ -19,3 +19,4 @@ pipeline {
             }
         }
     }
+}
