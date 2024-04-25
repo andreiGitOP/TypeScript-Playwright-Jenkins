@@ -1,17 +1,9 @@
 pipeline {
     agent any
+
+    tools{nodejs "recent ode"}
     
-    stages {
-        stage('Install Node.js') {
-            steps {
-                // Install Node.js tool using NodeJS plugin
-                nodejs(nodeJSInstallationName: 'recent ode') {
-                    // This step installs Node.js and npm
-                    // You can specify the Node.js version in the Jenkins global tool configuration
-                }
-            }
-        }
-        
+    stages {               
         stage('Install Playwright') {
             steps {
                 // Install Playwright as a development dependency
