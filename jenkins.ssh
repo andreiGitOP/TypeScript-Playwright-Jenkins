@@ -1,4 +1,6 @@
-pipeline {
+    pipeline {
+        tools{nodejs "recent ode"}
+
    agent { any { image 'mcr.microsoft.com/playwright:v1.43.0-jammy' } }
    stages {
       stage('e2e-tests') {
