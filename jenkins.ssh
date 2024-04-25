@@ -1,7 +1,7 @@
     pipeline {
     tools{nodejs "recent ode"}
-
-   agent {any}
+    agent any
+       
    stages {
       stage('e2e-tests') {
          steps {
