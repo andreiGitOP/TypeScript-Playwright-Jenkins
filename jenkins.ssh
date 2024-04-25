@@ -1,11 +1,12 @@
     pipeline {
-        tools{nodejs "recent ode"}
+    tools{nodejs "recent ode"}
 
-   agent { any { image 'mcr.microsoft.com/playwright:v1.43.0-jammy' } }
+   agent {any}
    stages {
       stage('e2e-tests') {
          steps {
             sh 'npm ci'
+            sh 'npx playwright install'
             sh 'npx playwright test'
          }
       }
