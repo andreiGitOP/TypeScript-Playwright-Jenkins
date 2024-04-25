@@ -5,7 +5,7 @@ pipeline {
         stage('Install Node.js') {
             steps {
                 // Install Node.js tool using NodeJS plugin
-                nodejs(nodeJSInstallationName: 'node') {
+                nodejs(nodeJSInstallationName: 'recent ode') {
                     // This step installs Node.js and npm
                     // You can specify the Node.js version in the Jenkins global tool configuration
                 }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Install Playwright as a development dependency
                 // This step assumes Node.js and npm are already installed
-                nodejs('node') {
+                nodejs('recent node') {
                     sh 'npm install --save-dev @playwright/test'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Run Playwright tests using npm script
                 // This step assumes Playwright is installed and configured in your project
-                nodejs('node') {
+                nodejs('recent node') {
                     sh 'npm run testCase'
                 }
             }
