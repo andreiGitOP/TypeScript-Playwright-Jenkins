@@ -13,6 +13,7 @@ test('Create and delete account', async ({ page }) =>{
 
     await expect(homePage.subtitleLocator).toHaveText('Full-Fledged practice website for Automation Engineers');
     await helper.clickSelect(homePage.loginLocator);
+    await helper.clickSelect(homePage.dataUseConsentLocator);
     await expect(homePage.newUserTextLocator).toHaveText('New User Signup!');
 
     await helper.fillField(loginPage.nameFieldLocator, 'testTest');
