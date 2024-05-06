@@ -2,7 +2,7 @@ import { APIRequestContext } from "@playwright/test";
 
 export class ProductList {
   readonly request: APIRequestContext;
-  readonly productListUrl: string = "https://automationexercise.com/api/productsList";
+  readonly productListUrl: string = "./api/productsList";
 
   constructor(request: APIRequestContext) {
     {
@@ -13,4 +13,8 @@ export class ProductList {
   async getProductList(){
     return await this.request.get(this.productListUrl);
   }
+
+  async postToProductList(){
+    return await this.request.post(this.productListUrl);
+  }  
 }
