@@ -39,7 +39,7 @@ export default defineConfig({
         screenshot: "only-on-failure",       
         headless: true,
         viewport: { width: 1920, height: 1089 },
-        trace: "retain-on-failure",        
+        trace: "on",        
       },
     },
   ],
